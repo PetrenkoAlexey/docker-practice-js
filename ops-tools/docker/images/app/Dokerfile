@@ -1,0 +1,11 @@
+FROM node:latest
+
+RUN npm install
+
+RUN mkdir -p /home/boilerplate
+
+WORKDIR /home/boilerplate
+
+EXPOSE 8888
+
+CMD ng serve --port 8888 --host 0.0.0.0 --poll 1
